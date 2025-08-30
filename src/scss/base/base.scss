@@ -1,0 +1,185 @@
+/*
+    Contains foundational styles such as resets, typography, and 
+    general element styles (e.g., for body, headings, links). 
+*/
+@use '../blocks/blocks.scss';
+@use '../utils/utils.scss';
+
+.latest-projects {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 7em 10px 7em;
+
+    h1,
+    .button {
+        margin: auto;
+    }
+}
+
+.projectsContainer {
+    display: flex;
+    justify-content: safe center;
+    gap: 20px;
+    padding: utils.$base-size;
+    flex-direction: row;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    #body,
+    .header {
+        background-color: var(--darkBG);
+    }
+
+    .nav {
+        border-bottom: 2px solid var(--lightBG);
+    }
+
+    .nav__link {
+        color: var(--lightBG);
+    }
+
+    .header__logo {
+        background-color: var(--lightBG);
+    }
+
+    .latest-projects h1,
+    .projectCard p {
+        color: var(--primaryColor);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    #body,
+    .header {
+        background-color: var(--lightBG);
+    }
+
+    .nav {
+        border-bottom: 2px solid var(--darkColor);
+    }
+
+    .nav__link {
+        color: var(--darkColor);
+    }
+
+    .header__logo {
+        background-color: blanchedalmond;
+    }
+
+    .projectCard p {
+        color: var(--primaryColor);
+    }
+}
+
+@media (width > 1517px) {
+    .nav {
+        width: 17em;
+
+        .nav__list {
+            font-size: var(--base-size);
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+    }
+
+    .bio {
+        margin: auto;
+    }
+
+    .projectsContainer,
+    .latest-projects {
+        flex-wrap: wrap;
+    }
+
+    .projectCard {
+        margin: auto;
+    }
+}
+
+@media (width > 967px) and (width <=1517px) {
+    .nav {
+        width: 17em;
+
+        .nav__list {
+            font-size: var(--base-size);
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+    }
+
+    .bio {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .projectsContainer {
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .projectCard {
+        margin: auto;
+    }
+}
+
+@media (width > 768px) and (width <=967px) {
+    .nav {
+        width: 17em;
+
+        .nav__list {
+            font-size: var(--base-size);
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 20px;
+            width: 100%;
+        }
+    }
+
+    .bio,
+    .projectsContainer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .bio__intro {
+        height: auto;
+    }
+
+    .projectCard {
+        margin: auto;
+    }
+}
+
+@media (width <=768px) {
+    .nav {
+        width: 4em;
+        padding: 0 10px;
+    }
+
+    .bio,
+    .latest-projects,
+    .projectsContainer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .bio__intro {
+        height: auto;
+    }
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .projectCard {
+        margin: auto;
+    }
+}
+

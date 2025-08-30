@@ -1,0 +1,28 @@
+@use '../utils/utils';
+
+.bio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5em 10px 5em;
+    background-image: url("../src/img/background.jpg");
+
+    h1,
+    p {
+        background-color: utils.$bioBG;
+    }
+
+    &__space {
+        height: 50px;
+    }
+
+    &__intro {
+        height: 344px;
+        width: 381px;
+    }
+
+    &__Buttons {
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,31 @@
+@use '../utils/utils';
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: calc(utils.$base-size * .8);
+        gap: 5px;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        transition: all .5s;
+        cursor: pointer;
+    }
+
+    &__item:hover {
+        scale: 1.2;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}

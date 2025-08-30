@@ -1,0 +1,32 @@
+@use '../utils/utils';
+
+.button {
+    justify-content: center;
+    align-items: center;
+    padding: utils.$base-size calc(utils.$base-size * 2);
+    border: none;
+    border-radius: 0.5rem;
+    font-family: "Tangerine", serif;
+    font-size: utils.$base-size;
+    margin: auto;
+}
+
+.button--primary {
+    background-color: red;
+    color: white;
+}
+
+.button--secondary {
+    background-color: lightblue;
+    color: black;
+}
+
+.button--tertiary {
+    background-color: green;
+    color: yellow;
+    width: 400px;
+}
+
+.button:hover {
+    filter: brightness(.85);
+}
